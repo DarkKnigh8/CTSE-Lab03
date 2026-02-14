@@ -109,9 +109,39 @@ Access the H2 database console at:
 http://localhost:8080/h2-console
 ```
 
+## API Documentation (Swagger UI)
+
+Interactive API documentation is available at:
+```
+http://localhost:8080/swagger-ui/index.html
+```
+
+This provides an interactive interface to explore and test all available endpoints. Swagger UI automatically generates documentation from Spring annotations on the REST controllers.
+
+## Testing
+
+The project includes unit tests for validating the application functionality.
+
+### Running Tests
+
+Execute the tests using Maven:
+```bash
+mvn test
+```
+
+### Test Dependencies
+
+- **spring-boot-starter-data-jpa-test**: Testing utilities for JPA
+- **spring-boot-starter-webmvc-test**: Testing utilities for Spring MVC controllers
+
+### Key Test Files
+
+- `ProductServiceApplicationTests.java`: Main test class for the application
+
 ## Dependencies
 
 - **spring-boot-starter-webmvc**: Web MVC framework for REST endpoints
 - **spring-boot-starter-data-jpa**: JPA abstraction for database operations
 - **h2**: In-memory relational database
 - **spring-boot-h2console**: H2 database web console
+- **springdoc-openapi-starter-webmvc-ui** (v2.5.0): Automatic OpenAPI 3.0 documentation and Swagger UI integration
